@@ -1,0 +1,42 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+html,body{
+  height: 100%;
+  width: 100%;
+}
+@font-face {
+  font-family: helllo1;
+  src: url(./MomoTrustSans-VariableFont_wght.ttf);
+}
+#main{
+  height:100%;
+  width:100%;
+  background-image: url(./5ca2dfb566980064e43a24eb64f0583a.jpg);
+  background-size: cover;
+  background-position: center;
+  padding-top: 30px;
+  text-align: center;
+}
+h1{
+  font-family: helllo1;
+  color: white;
+  
+  font-size: 80px;
+}
+button{
+  
+  background-color: orange;
+  border-radius: 7px;
+  margin-top: 10px;
+  padding:10px 10px;
+  font-family: helllo1;
+  font-size: 22px;
+  border:2px solid white;
+}
+button:hover{
+  background-color: darkorange;
+  transform: scale(1.06);
+}
