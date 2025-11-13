@@ -1,0 +1,26 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+html,body{
+  height: 100%;
+  width: 100%;
+}
+#div1{
+  height:1000px;
+  width:100%;
+  background-color: yellowgreen;
+}
+#div2{
+  height: 1000px;
+  width: 100%;
+  background-color: pink;
+}
+#stickyshit{
+  position:sticky;
+  background-color: red;
+  width:100%;
+  top:0;
+  height:100px;
+}

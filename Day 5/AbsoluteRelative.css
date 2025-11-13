@@ -1,0 +1,43 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+html,body{
+  height: 100%;
+  width: 100%;
+}
+#car1{
+  height: 100px;
+  width:100px;
+background-color: red;
+}
+#car2{
+  height: 200px;
+  width:200px;
+background-color: blue;
+position: absolute;
+top:2px;
+left:4px;
+
+
+}
+#car3{
+  height: 300px;
+
+  width:300px;
+background-color: yellow;
+}
+#parent{
+  background-color: red;
+  height:100px;
+  width:100px;
+  position: relative;
+}
+#child{
+  background-color: blue;
+  height:50px;
+  width:50px;
+  position: absolute;
+  top: 100px;
+}

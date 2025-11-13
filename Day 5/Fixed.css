@@ -1,0 +1,21 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+html,body{
+  height: 100%;
+  width: 100%;
+}
+#main{
+  height:2000px;
+}
+#sticky{
+  height: 100px;
+  width:100px;
+  border-radius: 50%;
+  background-color: blue;
+  position: fixed;
+  right:10px;
+  bottom:10px;
+}
