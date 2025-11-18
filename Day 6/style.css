@@ -1,0 +1,62 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+html,body{
+  height: 100%;
+  width: 100%;
+}
+@font-face {
+  font-family: hell;
+  src: url(../HelveticaNeue-Medium.otf);
+}
+
+#main{
+  height:100%;
+  width:100%;
+  background-color:black;
+  padding:10px;
+  
+}
+.card{
+  height:390px;
+  width:350px;
+  border-radius: 15px;
+  background-color: white;
+  position:relative;
+   overflow: hidden; 
+  
+}
+.card img{
+  height:100%;
+  width:100%;
+  object-fit: cover;
+  object-position: center;
+  
+}
+.mask{
+  position:absolute;
+  background:linear-gradient(transparent,black);
+  height:30%;
+  width:100%;
+  bottom:-30%;
+  transition: all ease 1s;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding:10px;
+  gap:150px;
+}
+.mask h3{
+  font-family:hell;
+  color:white;
+}
+.mask i{
+  background-color: white;
+  border-radius: 50%;
+  padding:2px;
+}
+.card:hover .mask{
+  bottom:0%;
+}
