@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+#btn1 {
+  background-color: pink;
+  color: blue;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 15px;
+}
+
+#btn2 {
+  background-color: yellow;
+  color: black;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 15px;
+}/*# sourceMappingURL=style1.css.map */

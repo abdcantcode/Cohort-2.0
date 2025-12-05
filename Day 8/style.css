@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+  height: 100%;
+  width: 100%;
+}
+main{
+  background-color: black;
+  width:100%;
+  height:100%;
+  display:grid;
+  grid-template-columns: 1.33fr 1fr 1fr 1fr;
+  grid-template-rows: 1.75fr 1fr;
+  grid-template-areas: "aside section section section"
+                        "aside id1 id2 id3";
+  
+                      }
+aside {
+  
+  grid-area: aside;
+}
+section {
+
+  grid-area: section;
+}
+#id1 {
+
+  grid-area: id1;
+}
+#id2 {
+
+  grid-area: id2;
+}
+#id3 {
+
+  grid-area: id3;
+}
+aside > img,
+section > img,
+#id1 > img,
+#id2 > img,
+#id3 > img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}

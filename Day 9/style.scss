@@ -1,0 +1,341 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: white;
+}
+
+@mixin flextypeshi($gappp) {
+  display: flex;
+  flex-direction: column;
+  gap: $gappp;
+}
+
+body {
+  background-color: black;
+}
+
+main {
+  width: 100%;
+  @include flextypeshi(0rem);
+  align-items: center;
+
+  section.view1 {
+    max-width: 1900px;
+    @include flextypeshi(0.5rem);
+    padding: 1rem;
+
+    .top {
+      width: 100%;
+
+      img {
+        width: 100%;
+        border-radius: 0.7rem;
+      }
+    }
+
+    .bottom {
+      @include flextypeshi(2.2rem);
+      background-color: rgb(37, 34, 34);
+      padding: 1.7rem;
+      border-radius: 0.7rem;
+
+      h3 {
+        font-weight: 400;
+      }
+
+      #text {
+        @include flextypeshi(0.7rem);
+
+        h1 {
+          text-transform: uppercase;
+          font-weight: 300;
+          font-size: 2.7rem;
+          line-height: 1.2;
+        }
+
+        p {
+          color: gray;
+          font-size: 1.4rem;
+        }
+
+        button {
+          width: fit-content;
+          border: none;
+          outline: none;
+          padding: 0.7rem 0.3rem;
+          border-radius: 0.7rem;
+        }
+      }
+    }
+  }
+
+  section.view2 {
+    @include flextypeshi(0.5rem);
+    width: 100%;
+    padding: 1rem;
+
+    .top,
+    .bottom {
+      display: flex;
+      text-align: center;
+      width: 100%;
+      justify-content: space-around;
+
+      #element {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        p {
+          color: gray;
+        }
+        h2 {
+          font-weight: 500;
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+
+  section.view3 {
+    @include flextypeshi(0.5rem);
+    padding: 1rem;
+
+    #top {
+      width: 100%;
+
+      img {
+        width: 100%;
+        border-radius: 0.7rem;
+      }
+    }
+
+    #bottom {
+      @include flextypeshi(3.2rem);
+      background-color: rgb(37, 34, 34);
+      padding: 1.7rem;
+      border-radius: 0.7rem;
+      p {
+        text-transform: uppercase;
+      }
+      #text {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        h1 {
+          font-weight: 400;
+          text-transform: uppercase;
+          letter-spacing: 0.2rem;
+        }
+
+        #para {
+          display: flex;
+          flex-direction: column;
+
+          p {
+            text-transform: none;
+            line-height: 1.5rem;
+            color: gray;
+          }
+        }
+      }
+    }
+  }
+
+  section.view4 {
+    @include flextypeshi(0.5rem);
+    padding: 1rem;
+
+    #top {
+      width: 100%;
+
+      img {
+        width: 100%;
+        border-radius: 0.7rem;
+      }
+    }
+
+    #bottom {
+      @include flextypeshi(3.2rem);
+      background-color: rgb(37, 34, 34);
+      padding: 1.7rem;
+      border-radius: 0.7rem;
+      p {
+        text-transform: uppercase;
+      }
+      #text {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        h1 {
+          font-weight: 400;
+          text-transform: uppercase;
+          letter-spacing: 0.2rem;
+        }
+
+        #para {
+          display: flex;
+          flex-direction: column;
+
+          p {
+            text-transform: none;
+            line-height: 1.5rem;
+            color: gray;
+          }
+        }
+      }
+    }
+  }
+  section#view5{
+    @include flextypeshi(0.5rem);
+    width:100%;
+    padding: 1rem;
+    .card{
+      width:100%;
+      background-image: url(https://assets-global.website-files.com/63cffb7c16ab3347fc9734c8/63d2ccbd7d003dfb6a1bdecb_team-01-p-1080.webp);
+      background-size: cover;
+      background-position: center;
+      aspect-ratio: 1/1;
+      display:flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-radius: 0.7rem;
+      padding:1rem;
+      #top{
+        display: flex;
+        justify-content: flex-end;
+        gap:0.7rem;
+        #icon{
+          padding:0.5rem;
+          background-color:rgba(94, 91, 91, 0.358);
+          backdrop-filter: blur(5px);
+          border-radius: 50%;
+          border:0.01rem solid white;
+          
+        }
+      }
+      #bottom{
+        display: flex;
+        background-color:rgba(94, 91, 91, 0.358);
+          backdrop-filter: blur(5px);
+        justify-content: space-between;
+        padding:1.5rem;
+        font-size: 1.3rem;
+        border:0.01rem solid white;
+        
+      }
+    }
+
+  }
+
+  @media (min-width: 900px) {
+    section.view1 {
+      flex-direction: row;
+      gap: 1.1rem;
+
+      .top,
+      .bottom {
+        width: 50%;
+      }
+
+      .bottom {
+        justify-content: space-between;
+        padding: 3rem;
+
+        #text {
+          h1 {
+            font-size: 3.2rem;
+            font-weight: 400;
+            width: 80%;
+          }
+        }
+      }
+    }
+
+    section.view2 {
+      flex-direction: row;
+    }
+
+    section.view3 {
+      flex-direction: row;
+      gap: 1.1rem;
+
+      #top,
+      #bottom {
+        width: 50%;
+      }
+
+      #bottom {
+        padding: 3rem;
+        justify-content: space-between;
+
+        #text {
+          h1 {
+            font-size: 2.2rem;
+            font-weight: 400;
+          }
+
+          #para {
+            flex-direction: row-reverse;
+            gap: 2rem;
+
+            p {
+              line-height: 1.75rem;
+              font-weight: 400;
+              font-size: 1.18rem;
+            }
+          }
+        }
+      }
+    }
+
+    section.view4 {
+      flex-direction: row;
+      gap: 1.1rem;
+
+      #top,
+      #bottom {
+        width: 50%;
+      }
+
+      #bottom {
+        padding: 3rem;
+        justify-content: space-between;
+
+        #text {
+          h1 {
+            font-size: 2.2rem;
+            font-weight: 400;
+          }
+
+          #para {
+            flex-direction: row;
+            gap: 2rem;
+
+            p {
+              line-height: 1.75rem;
+              font-weight: 400;
+              font-size: 1.18rem;
+            }
+          }
+        }
+      }
+    }
+    section#view5{
+      flex-direction: row;
+      gap:1rem;
+    }
+  }
+}

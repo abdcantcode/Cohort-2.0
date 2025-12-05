@@ -1,0 +1,8 @@
+@import "button";
+
+#btn1{
+  @include button-style(pink,blue);
+}
+#btn2{
+  @include button-style(yellow,black);
+}

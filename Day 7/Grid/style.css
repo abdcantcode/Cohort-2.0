@@ -1,0 +1,22 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body{
+  height: 100%;
+  width: 100%;
+}
+main{
+  height: 100%;
+  width:100%;
+  background-color: black;
+  display: grid;
+  grid-template-columns: 100px 1fr minmax(100px,auto) ;
+  grid-template-rows: repeat(3,1fr);
+  gap: 10px;
+  /* rowgap and columngap */
+}
+#child{
+  background-color: red;
+}

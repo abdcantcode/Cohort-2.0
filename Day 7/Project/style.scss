@@ -1,0 +1,48 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body{
+  height: 100%;
+  width: 100%;
+}
+main{
+  height:100%;
+  width:100%;
+  background-color: white;
+  display:flex;
+  gap:10px;
+  
+  section{
+    flex-grow: 1;
+    transition: all ease 1s;
+    
+  }
+  #id1{
+    background-image: url(https://i.pinimg.com/736x/20/8a/03/208a039eac913c6847f9cb095b0caaf9.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  #id2{
+    background-image: url(https://i.pinimg.com/736x/c0/b4/03/c0b40320d8653341a8232fdcec003e7f.jpg);
+    background-size:cover;
+    background-position: center;
+  }
+  #id3{
+    background-image: url(https://i.pinimg.com/736x/b9/fd/34/b9fd34e8cb764018c289ca4fdf485f26.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  #id4{
+    background-image: url(https://i.pinimg.com/736x/0d/be/00/0dbe004edbf93603cb78ca836fd7fad7.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+    section:hover{
+      flex-grow: 2;
+    }
+
+  // section:nth-child could have been used here as well
+}
