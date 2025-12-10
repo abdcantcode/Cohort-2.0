@@ -7,25 +7,30 @@ html,body{
   height:100%;
   width: 100%;
 }
+
+@keyframes boxanimation {
+  from{
+    background-color: white;
+    border-radius: 5px;
+    scale: 1;
+  }  
+  to{
+    background-color: red;
+    border-radius: 50%;
+    scale:1.5;
+  }
+} 
+
 body{
   background-color: black;
   display: flex;
   align-items: center;
-  justify-items: center;
+  justify-content: center;
+
 }
 
 .box{
-  
   height:100px;
   width:100px;
-  animation: boxanimation;
-}
-@keyframes boxanimation {
-  from{
-    background-color: white;
-
-  }  
-  to{
-    background-color: red;
-  }
+  animation: boxanimation 5s infinite forwards alternate;
 }
