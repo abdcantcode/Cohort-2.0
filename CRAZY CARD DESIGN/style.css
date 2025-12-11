@@ -16,17 +16,23 @@ body{
 }
 .card{
   width:300px;
-  height: 400px;
+  padding-bottom: 10px;
   background-color: black;
   display: flex;
   gap:10px;
   border-radius: 10px;
   flex-direction: column;
   padding-inline: 10px;
+  
   box-shadow: 0 0 50px rgb(255,0,123);
+  border: 5px solid rgba(255, 255, 255, 0);
+  background:linear-gradient(black) padding-box, 
+    conic-gradient(from 20deg, black,rgb(255,0,123),black) border-box;
+  /*IDHAR THODI LOLLI H */
+    
 }
 .card img{
-  height:70%;
+  
   width: 100%;;
 }
 .card h1, .card p{
