@@ -1,0 +1,51 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body{
+  height: 100%;
+  width: 100%;
+}
+body{
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  anchor-name: --something;
+}
+.box{
+  height:300px;
+  width: 300px;
+  
+}
+.box:hover{
+  anchor-name: --something;
+}
+.red{
+  background-color: red;
+}
+.blue{
+  background-color:blue;
+}
+.green{
+  background-color: green;
+  
+}
+.anchor{
+  position: absolute;
+  background-color: white;
+  position-anchor: --something;
+  
+  top:anchor(top);
+  left:anchor(left);
+  bottom:anchor(bottom);
+  right:anchor(right);
+  transition: all 0.3s linear;
+  mix-blend-mode: difference;
+  pointer-events: none;
+}
+
+/* The notes to be taken are the fact that anchor-name:--something should be given to the target */
+/* I will be creating the anchor with .anchor */
+/* It should have position absolute and position-anchor: --something; */
