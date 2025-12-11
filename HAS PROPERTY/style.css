@@ -1,0 +1,38 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body{
+  height: 100%;
+  width:100%;
+}
+body{
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:20px;
+}
+.box{
+  height: 200px;
+  width: 200px;
+  transition: all 0.5s linear;
+}
+.red{
+  background-color: red;
+}
+.blue{
+  background-color: blue;
+}
+.green{
+  background-color: green;
+}
+body:has(.box:hover) .box{
+  transform: scale(0.8);
+  opacity: 0.5;
+}
+.box:hover{
+  transform: scale(1.2) !important;
+  opacity: 1 !important;
+}
