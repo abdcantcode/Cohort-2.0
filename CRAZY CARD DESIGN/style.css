@@ -23,7 +23,7 @@ body{
   border-radius: 10px;
   flex-direction: column;
   padding-inline: 10px;
-  border: 2px solid rgb(249, 17, 195);
+  box-shadow: 0 0 50px rgb(255,0,123);
 }
 .card img{
   height:70%;
