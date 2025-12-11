@@ -1,0 +1,60 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body{
+  height:100%;
+  width: 100%;
+  
+}
+body{
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@property --rotate{
+  syntax: "<angle>";
+  initial-value:0deg;
+  inherits: false;
+}
+
+@keyframes boxanimation {
+  from {
+    --rotate: 0deg;
+  }
+  to {
+    --rotate:360deg;
+  }
+}
+
+
+.card{
+  width:300px;
+  padding-bottom: 10px;
+  background-color: black;
+  display: flex;
+  gap:10px;
+  border-radius: 10px;
+  flex-direction: column;
+  padding-inline: 10px;
+  
+  /* box-shadow: 0 0 50px rgb(255,0,123); */
+  border: 5px solid rgba(0, 0, 0, 0);
+  background:linear-gradient(black) padding-box, 
+    conic-gradient(from var(--rotate), black,rgb(255,0,123),black) border-box;
+  /*IDHAR THODI LOLLI H */
+
+  animation: boxanimation 5s linear;
+  animation-iteration-count: infinite;
+    
+}
+.card img{
+  
+  width: 100%;;
+}
+.card h1, .card p{
+  color: whitesmoke;
+}
