@@ -42,4 +42,31 @@ obj2.fnc();
 
 
 //Object ke andar es5 function ke andar es6 function ke andar this ki value--> object
+//Idhar bhi ek case dekhlo lala
+let h1=document.querySelector('h1');
+h1.addEventListener('click',function(){
+  console.log(this); //Idhar this ki value h1 ki rehti 
+});
+//settimeout ke andar this ki value window aati
 
+
+
+//CALL APPLY AUR BIND, function mein this ki value window hoti aur agar usku window nai koi aur object hona hai toh call apply aur bind use karna 
+
+let objbgn={
+  name:"Abdullah",
+}
+
+function bgn(){
+  console.log(this);
+}
+bgn.call(objbgn);
+
+
+function bgn1(a,b,c){
+  console.log(this);
+}
+bgn1.call(objbgn,1,2,3);
+bgn1.apply(objbgn,[1,2,3]);
+let nayabaiganfnc=bgn1.bind(objbgn,1,2,3);
+nayabaiganfnc();
