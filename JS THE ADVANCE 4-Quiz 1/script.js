@@ -178,11 +178,34 @@ console.log(nalla===nalla1);//false cuz of the method basically
 
 // SECTION 5: call, apply, bind
 // 	13.	Create a function that prints this.name.
-// 	14.	Create an object that contains a name property.
+function mallu(a,b,c){
+  console.log(this.name,a,b,c);
+}
+let objj={
+  name:"Abdullah",
+}
 
+// 	14.	Create an object that contains a name property.
 // Use call to run the function using the object
+mallu.call(objj,1,2,3);
 // Use apply to run the function using the object
+mallu.apply(objj,[1,2,3]);
 // Use bind to create a new function and then call it
+let nayafunction=mallu.bind(objj,1,2,3);
+nayafunction();
 // 	15.	Borrow a method from one object and run it for another object using call.
+let user11 = {
+  name: "Abdullah",
+  greet: function (city) {
+    console.log(`Hi, I am ${this.name} from ${city}`);
+  }
+};
+
+let user22 = {
+  name: "Ayaan"
+};
+
+// user1 ka method → user2 ke liye use
+user1.greet.call(user22, "Delhi");
 
 // The goal is to understand how this can be manually controlled.
