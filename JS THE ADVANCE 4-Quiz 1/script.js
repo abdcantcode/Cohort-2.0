@@ -206,6 +206,6 @@ let user22 = {
 };
 
 // user1 ka method → user2 ke liye use
-user1.greet.call(user22, "Delhi");
+user11.greet.call(user22, "Delhi");
 
 // The goal is to understand how this can be manually controlled.
