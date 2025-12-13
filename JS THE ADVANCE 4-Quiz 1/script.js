@@ -142,11 +142,35 @@ let apnaobject={
 
 // SECTION 4: Constructor Functions and Prototypes
 // 	10.	Create a User constructor function (do not use class syntax).
+function User(){
+  this.name="Abdullah";
+  this.login=function(){
+    console.log("Tumey login hogayi so");
+  }
+}
+let nalla=new User();
+let nalla1=new User();
+nalla.login();
+//Ek Constructor Function Capital named rehta, this keyword use hota, new keyword use hota aur...
 // 	11.	Add a login method in two ways:
 // First, inside the constructor
+function User1(){
+  this.name="Abdullah";
+  this.login=function(){
+    console.log("Tumey login hogayi so");
+  }
+}
+User1.prototype.loginn=function(){
+  console.log("User login hogaya re");
+}
+let lala=new User1();
+let lalu=new User1();
+console.log(lala.login===lalu.login);//false
+console.log(lala.loginn===lalu.loginn);//true
 // Then, move the method to the prototype
 // 	12.	Create two User objects and compare their login methods using equality.
 // Explain why the result is true or false.
+console.log(nalla===nalla1);//false cuz of the method basically
 
 // The purpose here is to understand how prototypes help share behavior efficiently.
 
