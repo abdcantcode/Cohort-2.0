@@ -132,14 +132,23 @@ showBrand.call(obj2)
 
 // SECTION 7: apply Method Practice
 // 	23.	Create a function introduce that accepts two arguments: city and role, and prints name, city, and role using this.name.
+function introduce(role){
+  console.log(this.name+" "+role);
+}
+let nameobj={
+  name:"Abdullah",
+}
+introduce.apply(nameobj,['Nalla']);
 // 	24.	Create an object with a name property.
 // 	25.	Use apply to call introduce using the object and an array of arguments.
 // 	26.	Explain in simple words how apply differs from call.
+//Apply mein bas apan dete ek array hehe
 
 // ⸻
 
 // SECTION 8: bind Method Practice
 // 	27.	Create a function greet that prints “Hello” followed by this.name.
+
 // 	28.	Bind this function to an object and store the returned function in a variable.
 // 	29.	Call the bound function later and observe the output.
 // 	30.	Explain why bind is useful when functions are executed later or inside callbacks.
