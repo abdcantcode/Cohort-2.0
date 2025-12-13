@@ -91,11 +91,23 @@ anda();
 // ⸻
 
 // SECTION 5: Constructor Function and Prototype
+function Vehicle(type,wheels){
+  this.type=type;
+  this.wheels=wheels;
+  this.behave=function(){
+    console.log("bangis");//Sabku alag
+  }
+}
+let v1=new Vehicle("achi",100);
+let v2=new Vehicl1("gandi",200);
+Vehicle.prototype.behave=function(){//Shared for objects rehta iney
+  console.log("Acha behaviour");
+}
 // 	15.	Create a constructor function called Vehicle that accepts type and wheels.
 // 	16.	Add a method describe inside the constructor and observe memory behavior when multiple objects are created.
 // 	17.	Move the same method to Vehicle.prototype and repeat the test.
 // 	18.	Explain why the prototype approach is preferred.
-
+//Iney bachata spaceeeeeee
 // ⸻
 
 // SECTION 6: call Method Practice
