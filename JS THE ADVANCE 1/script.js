@@ -12,7 +12,7 @@ class Remote{
     console.log("Band hogaya");
   }
 }
-let remote1=new Remote
+let remote1=new Remote();
 
 class Baigan{
   constructor(product,price){
