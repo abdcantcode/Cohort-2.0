@@ -99,7 +99,7 @@ function Vehicle(type,wheels){
   }
 }
 let v1=new Vehicle("achi",100);
-let v2=new Vehicl1("gandi",200);
+let v2=new Vehicle("gandi",200);
 Vehicle.prototype.behave=function(){//Shared for objects rehta iney
   console.log("Acha behaviour");
 }
@@ -112,10 +112,22 @@ Vehicle.prototype.behave=function(){//Shared for objects rehta iney
 
 // SECTION 6: call Method Practice
 // 	19.	Create a function showBrand that prints this.brand.
+function showBrand(){
+  console.log(this.brand);
+}
+let obj={
+  brand:"Adidas",
+}
+let obj2={
+  brand:"Nike",
+}
+showBrand.call(obj);
+showBrand.call(obj2)
+
 // 	20.	Create two different objects with brand values.
 // 	21.	Use call to execute showBrand for both objects.
 // 	22.	Explain what problem call is solving here.
-
+//It allows you to return the object, instead of window...
 // ⸻
 
 // SECTION 7: apply Method Practice
