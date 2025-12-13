@@ -53,21 +53,38 @@ class BankAccount{
   constructor(accountHoolderName,balance){
     this.accountHoolderName=accountHoolderName;
     this.balance=balance;
+    this.deposit=function(amount){
+      this.balance+=amount;
+      console.log(balance);
+    }
   }
-  
 }
+let ba1=new BankAccount("Abdullah",100)
+ba1.deposit(100);
+let ba2=new BankAccount("Aamer",1000);
+console.log(ba1.balance);
+console.log(ba2.balance);
 // Its constructor should accept accountHolderName and balance.
 // 	8.	Inside the constructor, store both values using this.
 // 	9.	Add a method deposit(amount) that increases the balance.
 // 	10.	Create two bank accounts and deposit money into only one.
 // Observe and explain why the second account is not affected.
-
+//har ek object alag alag hai bolke change nai huwa re lala
 // ⸻
 
 // SECTION 4: Understanding this (Very Important)
 // 	11.	Create an object named profile with a property username and a method printName that logs this.username.
+let profile={
+  username:"Abdullah Don",
+  printName:function(){
+    console.log(this.username);
+  }
+}
+profile.printName();
 // 	12.	Call the method normally and observe the output.
 // 	13.	Store the method in a separate variable and call it.
+let anda=profile.printName.bind(profile);
+anda();
 // Observe what happens to this and explain why.
 // 	14.	Modify the code so that this works correctly again.
 
