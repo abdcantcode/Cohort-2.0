@@ -8,7 +8,8 @@ let Laptop={
   },
   //2
   priceIncrease:function(){
-    console.log(this.price+((this.price)*0.1));
+    this.price+=this.price*0.1;
+    console.log(this.price)
   }
 }
 // 	2.	Add one more method to the same object that increases the price by 10 percent.
@@ -55,7 +56,7 @@ class BankAccount{
     this.balance=balance;
     this.deposit=function(amount){
       this.balance+=amount;
-      console.log(balance);
+      console.log(this.balance);
     }
   }
 }
@@ -148,7 +149,12 @@ introduce.apply(nameobj,['Nalla']);
 
 // SECTION 8: bind Method Practice
 // 	27.	Create a function greet that prints “Hello” followed by this.name.
-
+function greet(){
+  console.log("Hello"+this.name);
+}
+let namaste=greet.bind(nameobj);
+namaste();
 // 	28.	Bind this function to an object and store the returned function in a variable.
 // 	29.	Call the bound function later and observe the output.
 // 	30.	Explain why bind is useful when functions are executed later or inside callbacks.
+//bind() is useful because it permanently fixes the value of this, even when the function is executed later, inside callbacks, event handlers, or asynchronous code.
