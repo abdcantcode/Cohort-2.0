@@ -76,10 +76,25 @@ console.log(product.discount());
 // brand
 // speed
 // a drive method that prints the car brand and speed
+class Car{
+  constructor(brand,speed){
+    this.brand=brand;
+    this.speed=speed;
+  }
+  drive(){
+    console.log(this.brand+"-"+this.speed);
+  }
+}
+
 // 	5.	Create two different car objects from the same class and verify that their data is different.
+let car1=new Car("Lamborghini",1000000);
+car1.drive();
+let car2=new Car("BMW",20000);
+car2.drive();
+console.log(car1===car2);
 // 	6.	Answer this in your own words:
 // If classes did not exist, how would you write this logic and what problems might occur when the project becomes large?
-
+//Code ke chakle lagjaate they object banalete rehna padhta tha khali pelu ke jaisa
 // ⸻
 
 // SECTION 3: Constructor and this keyword
