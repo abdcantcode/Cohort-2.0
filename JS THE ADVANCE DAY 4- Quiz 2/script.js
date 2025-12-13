@@ -49,6 +49,13 @@ console.log(emp2.salary);
 
 // SECTION 3: Constructor and Initialization
 // 	7.	Create a class named BankAccount.
+class BankAccount{
+  constructor(accountHoolderName,balance){
+    this.accountHoolderName=accountHoolderName;
+    this.balance=balance;
+  }
+  
+}
 // Its constructor should accept accountHolderName and balance.
 // 	8.	Inside the constructor, store both values using this.
 // 	9.	Add a method deposit(amount) that increases the balance.
