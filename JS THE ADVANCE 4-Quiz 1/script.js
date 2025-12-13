@@ -100,14 +100,42 @@ console.log(car1===car2);
 // SECTION 3: Constructor and this keyword
 // 	7.	Create a Student class whose constructor accepts name and roll number.
 // Add a method introduce that prints both values.
+class Student{
+  constructor(name,rno){
+    this.name=name;
+    this.rno=rno;
+  }
+  introduce(){
+    console.log(this.name+" "+this.rno);
+  }
+}
 // 	8.	Inside the constructor, set values using this.
+//Done uppar ich 
 // Then try removing this and notice what error occurs and why.
+class Student1{
+  constructor(name,rno){
+    name=name;
+    rno=rno;
+  }
+  introduce(){
+    console.log(this.name+" "+this.rno);
+  }
+}
+//chakle lagjaate
 // 	9.	Create an object with two methods:
+let apnaobject={
+  normal:function(){
+    console.log(this);//Returns apnaobject
+  },
+  arrowwaala:()=>{
+    console.log(this);//Window deta iney
+  }
+}
 // One method using a normal function
 // One method using an arrow function
 
 // Inside both, print this and observe the difference.
-
+//Ek window deta ek woich object deta
 // The goal is to clearly understand how this works and when it changes.
 
 // ⸻
