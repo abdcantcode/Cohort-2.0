@@ -25,10 +25,26 @@ Laptop.priceIncrease();
 // salary
 
 // Add a method showDetails that prints name and salary.
+class Employee{
+  constructor(){
+    this.name="Abdullah";
+    this.salary=10000;
+  }
+  showDetails(){
+    console.log(this.name+" "+this.salary);
+  }
+}
 // 	5.	Create three employee objects from the same class and verify that modifying one employee does not affect the others.
+let emp1=new Employee();
+let emp2=new Employee();
+let emp3=new Employee();
+emp1.salary=0;
+console.log(emp1.salary);
+console.log(emp2.salary);
+//It changes
 // 	6.	Explain in your own words:
 // Why is class considered a better option than writing similar objects again and again?
-
+//Modularity, etc
 // ⸻
 
 // SECTION 3: Constructor and Initialization
