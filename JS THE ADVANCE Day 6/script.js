@@ -24,7 +24,7 @@ prm.then(function(){//.then se resolve waala handle hota I mean agar resolve hog
 
 //Fetch API ka timepass 
 fetch(`https://randomuser.me/api/`)//Fetch woh url pe jaata data laata more like a promise ya technically ek promise ich samjho lekin gicchi yeh rehti woh data rehta nahi json format mein, bgni format mein rehta uney toh uske liye...bolto jab tak pending state mein rehta sab aagaya toh ya toh resolve ya toh reject
-.then(function(rawdata){
+.then(function(rawdata){//woh rawdata readable stream rehti .json() se object banjata
   return rawdata.json(); //yeh bhi technically ek promise ich return karta
 })
 .then(function(data){
