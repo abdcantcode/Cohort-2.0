@@ -37,3 +37,17 @@ fetch(`https://randomuser.me/api/`)//Fetch woh url pe jaata data laata more like
 fetch(`https://randomuser.me/api/`)
 .then((raw)=>raw.json())
 .then((data)=>console.log(data))//Aisa bhi likh sakte 
+
+//Asycn await promise pe kaam karta hai, agar promise bana hai toh woh chalega
+//I mean ki agar promise return hota hai toh ig
+//Await sirf promise ke pehle lagta hai 
+
+async function abcd(){
+  let rawdata=await fetch(`https://randomuser.me/api/`);
+  let data=await rawdata.json();
+  console.log(data);
+}
+abcd();
+//.then ke badle await pehle likh sakte lekin await koi function mein rehna padhta necessary aur agar function banaye toh woh function ku async dena bhi necessay hai 
+
+
