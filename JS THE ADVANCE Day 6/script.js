@@ -80,7 +80,7 @@ async function abcd(){
 
 //Logical error add() function mein tum ich - kardiye toh tumhari galti errors batate nai yeh sab 
 
-//Error Stack -> name,stack aur message
+//Error -> name,stack aur message + try catch and finally
 try{
   let a=12;
   console.log(a.name.type);
@@ -91,3 +91,7 @@ catch(e){
   console.log(e.stack);
   console.log(e);
 }
+finally{//Dono mein se ek chalta aur in toh pakka ich chalta re baba
+  console.log("apan hai goated");
+}
+
