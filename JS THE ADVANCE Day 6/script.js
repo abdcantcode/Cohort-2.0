@@ -63,3 +63,19 @@ async function abcd(){
   let v=await getnum();
   console.log(v);
 }
+
+//Types of errors
+//Syntax error->Format mein error
+//leat a=12;
+//consoool.log(a); 
+
+//Runtime error-->bolto compile time nai runtime mein error
+//let a=12;
+//function abcd(){
+//console.log(a.name.lullu);
+//}
+//abcd();
+//Aise kuch hai ich nai toh aata runtime error;
+//a mein name hai ich nai basically toh error likhte waqt nai chalte waqt error 
+
+//Logical error add() function mein tum ich - kardiye toh tumhari galti errors batate nai yeh sab 
