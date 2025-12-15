@@ -79,3 +79,15 @@ async function abcd(){
 //a mein name hai ich nai basically toh error likhte waqt nai chalte waqt error 
 
 //Logical error add() function mein tum ich - kardiye toh tumhari galti errors batate nai yeh sab 
+
+//Error Stack -> name,stack aur message
+try{
+  let a=12;
+  console.log(a.name.type);
+}
+catch(e){
+  console.log(e.name);
+  console.log(e.message);
+  console.log(e.stack);
+  console.log(e);
+}
