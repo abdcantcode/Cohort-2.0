@@ -33,3 +33,7 @@ fetch(`https://randomuser.me/api/`)//Fetch woh url pe jaata data laata more like
 .catch(function(err){
   console.log(err);//In case daldiye kuch galat url or stuff ya api respond nai kara and shit toh yeh chalta 
 })
+
+fetch(`https://randomuser.me/api/`)
+.then((raw)=>raw.json())
+.then((data)=>console.log(data))//Aisa bhi likh sakte 
