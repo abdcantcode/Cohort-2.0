@@ -95,3 +95,21 @@ finally{//Dono mein se ek chalta aur in toh pakka ich chalta re baba
   console.log("apan hai goated");
 }
 
+//Throwing custom errors 
+try{
+  console.log(a);
+}
+catch(e){
+  throw new Error("Dalle define toh kar a ku");
+}
+
+//or
+try{
+  console.log(a);
+}
+catch(e){
+  console.log(
+    new Error("Dalle define toh kar a ku")
+  );
+}
+
