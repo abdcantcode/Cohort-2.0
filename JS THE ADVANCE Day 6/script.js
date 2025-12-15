@@ -49,5 +49,17 @@ async function abcd(){
 }
 abcd();
 //.then ke badle await pehle likh sakte lekin await koi function mein rehna padhta necessary aur agar function banaye toh woh function ku async dena bhi necessay hai 
-
-
+function getnum(){
+return new Promise((resolve,reject)=>{
+  setTimeout(() => {
+     let num=Math.floor(Math.random()*10);
+     if(num<5){
+      resolve("DALLE");
+     }
+     else reject("NALLE");
+  },2000);
+})};
+async function abcd(){
+  let v=await getnum();
+  console.log(v);
+}
