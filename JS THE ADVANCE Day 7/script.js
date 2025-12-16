@@ -24,12 +24,13 @@ Build a small weather dashboard that fetches current weather data from a public 
 
 function getWeather(city) {
     let apikey = 'd6d96dd96d736553e1660d99053e99b2';
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apikey}`)
       .then(function (rawdata) {
         return rawdata.json();
       })
       .then(function (data) {
-        console.log(data);
+        console.log(data.main.temp);
+        alert(data.main.temp+"°C");
       })
 }
 getWeather("Hyderabad");
