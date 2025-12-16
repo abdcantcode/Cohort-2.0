@@ -102,10 +102,28 @@ function sendemail(useremail){
   },num*1000);
   })
 }
-sendemail("abdullah@gmail.com")
-.then(function(data){
-  console.log(data);
-})
-.catch(function(err){
-  console.log(err);
-})
+// sendemail("abdullah@gmail.com")
+// .then(function(data){
+//   console.log(data);
+// })
+// .catch(function(err){
+//   console.log(err);
+// })
+//yeh essentially woh uppar ke promise ku handle karre
+async function emailbhejopoore(emails){
+  let responses=emails.map(function(email){
+    return sendemail(email)
+    .then(function(data){
+      return data;
+    })
+    .catch(function(err){
+      return err;
+    })
+  })
+  //ab tak woh promises resolve nai huwe basically
+  let ans=await Promise.all(responses);
+  ans.forEach(function(val,index){
+    console.log((index+1)+". "+val);
+  })
+}
+emailbhejopoore(useremails);
