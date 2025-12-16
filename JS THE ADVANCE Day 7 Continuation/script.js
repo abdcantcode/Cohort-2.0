@@ -12,3 +12,20 @@ document.querySelector('#search').addEventListener('input',debounce(function(){
 },400)
 )
 
+//Throttling
+function throttle(fn,delay){
+  let last=0;
+  return function(){
+    const now = Date.now();
+    if(now-last>=delay){
+      last=now;
+      fn();
+    }
+  }
+
+}
+window.addEventListener("mousemove",throttle(function(){
+  console.log("hila re iney");
+},2000)
+)
+//Har 2 second move karey toh ich chalna typa stuff
