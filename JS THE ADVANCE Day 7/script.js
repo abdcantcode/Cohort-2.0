@@ -23,7 +23,6 @@ Build a small weather dashboard that fetches current weather data from a public 
 - Demonstrate at least one custom thrown error (e.g., `ExtremeTemperatureError`) and handle it in the UI. */
 
 function getWeather(city) {
-  try {
     let apikey = 'd6d96dd96d736553e1660d99053e99b2';
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`)
       .then(function (rawdata) {
@@ -32,10 +31,5 @@ function getWeather(city) {
       .then(function (data) {
         console.log(data);
       })
-  }
-  catch (err) {
-    
-    console.log(err);
-  }
 }
 getWeather("Hyderabad");
