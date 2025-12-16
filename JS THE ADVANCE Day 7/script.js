@@ -94,12 +94,18 @@ function sendemail(useremail){
   let probability=Math.floor(Math.random()*10);
   setTimeout(() => {
     if(probability<=5){
-      resolve();
+      resolve("Email sent successfully");
     }
     else{
-      reject();
+      reject("Email not sent");
     }
   },num*1000);
   })
 }
-
+sendemail("abdullah@gmail.com")
+.then(function(data){
+  console.log(data);
+})
+.catch(function(err){
+  console.log(err);
+})
