@@ -22,3 +22,5 @@ let obj={
 let obj2={...obj};
 let {...obj3}=obj;
 console.log(obj2,obj3);
+let {name,age}=obj;
+console.log(name,age);
