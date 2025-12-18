@@ -10,3 +10,7 @@ let a=arr1[0];
 let [x,y,z]=arr1;
 let [c,...b]=arr1; //shuru ka 1 c hai phir 2->7 hai b
 //destructuring objects x becomes 1 y becomes 2 and so on 
+let ar=[1,2,3];
+// let [...ar2]=ar;
+// let ar2=[...ar] //Yeh do same hai..
+// console.log(ar2); 
