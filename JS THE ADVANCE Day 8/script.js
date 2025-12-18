@@ -14,3 +14,11 @@ let ar=[1,2,3];
 // let [...ar2]=ar;
 // let ar2=[...ar] //Yeh do same hai..
 // console.log(ar2); 
+
+let obj={
+  name:"Abd",
+  age:22
+}
+let obj2={...obj};
+let {...obj3}=obj;
+console.log(obj2,obj3);
